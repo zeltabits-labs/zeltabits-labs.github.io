@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="ZeltaBits Labs - Build. Innovate. Deliver.">
+  <meta name="robots" content="index, follow">
+
+  <title>ZeltaBits Labs | Build. Innovate. Deliver.</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #ffffff;
+      background: #050914;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(5, 9, 20, 0.95);
+      border-bottom: 1px solid #1d2940;
+    }
+
+    nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .nav-logo {
+      width: 105px;
+      height: 42px;
+      object-fit: contain;
+      background: #ffffff;
+      border-radius: 7px;
+      padding: 3px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      color: #b9c5d8;
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      color: #ffffff;
+    }
+
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      padding: 70px 0;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 7px 14px;
+      border: 1px solid #285eb5;
+      border-radius: 30px;
+      color: #9ec4ff;
+      background: #0b1a36;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    h1 {
+      margin: 22px 0;
+      font-size: 68px;
+      line-height: 1.05;
+      letter-spacing: -3px;
+    }
+
+    .blue {
+      color: #2d8cff;
+    }
+
+    .cyan {
+      color: #16d9ff;
+    }
+
+    .description {
+      max-width: 600px;
+      color: #aab6ca;
+      font-size: 18px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 20px;
+      border-radius: 12px;
+      font-weight: bold;
+      border: 1px solid #26344d;
+    }
+
+    .primary {
+      background: #176cff;
+      border-color: #176cff;
+    }
+
+    .secondary {
+      background: #0b1220;
+    }
+
+    .logo-card {
+      padding: 14px;
+      border: 1px solid #263753;
+      border-radius: 25px;
+      background: #0a111e;
+      box-shadow: 0 25px 70px rgba(0,0,0,0.45);
+    }
+
+    .logo-box {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 25px 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .main-logo {
+      width: 100%;
+      max-width: 650px;
+      height: auto;
+      display: block;
+    }
+
+    .logo-caption {
+      text-align: center;
+      color: #8997ad;
+      font-size: 12px;
+      margin-top: 12px;
+      letter-spacing: 1px;
+    }
+
+    section {
+      padding: 85px 0;
+    }
+
+    .section-label {
+      color: #6da5ff;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 10px 0;
+      font-size: 38px;
+      line-height: 1.2;
+    }
+
+    .section-text {
+      max-width: 700px;
+      color: #aab6ca;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 35px;
+    }
+
+    .card {
+      padding: 28px;
+      border: 1px solid #1d2a40;
+      border-radius: 20px;
+      background: #0b1322;
+    }
+
+    .card-number {
+      color: #6ea6ff;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .card h3 {
+      margin: 15px 0 8px;
+      font-size: 19px;
+    }
+
+    .card p {
+      color: #9eabc0;
+      font-size: 14px;
+    }
+
+    .contact {
+      text-align: center;
+      padding: 60px 25px;
+      border: 1px solid #214a85;
+      border-radius: 25px;
+      background: #09172b;
+    }
+
+    .contact p {
+      max-width: 650px;
+      margin: 12px auto 25px;
+      color: #aab6ca;
+    }
+
+    footer {
+      padding: 28px 0;
+      border-top: 1px solid #1d2940;
+      color: #8996aa;
+      font-size: 13px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 800px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding: 55px 0;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      h1 {
+        font-size: 50px;
+        letter-spacing: -2px;
+      }
+
+      .description {
+        font-size: 16px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      h2 {
+        font-size: 32px;
+      }
+
+      .nav-logo {
+        width: 95px;
+        height: 38px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+
+        <a href="#home" class="brand">
+          <img
+            src="logo.png"
+            alt="ZeltaBits Labs Logo"
+            class="nav-logo"
+          >
+          <span>ZeltaBits Labs</span>
+        </a>
+
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#work">What We Build</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+
+  <main>
+
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+
+        <div>
+
+          <span class="badge">
+            Independent Software Developer
+          </span>
+
+          <h1>
+            Build.
+            <span class="blue">Innovate.</span>
+            <br>
+            <span class="cyan">Deliver.</span>
+          </h1>
+
+          <p class="description">
+            ZeltaBits Labs creates useful, modern and reliable digital
+            products with a focus on thoughtful design, practical technology
+            and a better user experience.
+          </p>
+
+          <div class="buttons">
+
+            <a href="#work" class="button primary">
+              Explore Our Work
+            </a>
+
+            <a
+              href="mailto:zeltabitslabs.help@gmail.com"
+              class="button secondary"
+            >
+              Contact Support
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="logo-card">
+
+          <div class="logo-box">
+
+            <img
+              src="logo.png"
+              alt="Official ZeltaBits Labs Logo"
+              class="main-logo"
+            >
+
+          </div>
+
+          <div class="logo-caption">
+            ZELTABITS LABS
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section id="about">
+      <div class="container">
+
+        <div class="section-label">
+          About ZeltaBits Labs
+        </div>
+
+        <h2>
+          Technology designed to be useful.
+        </h2>
+
+        <p class="section-text">
+          ZeltaBits Labs is an independent software development brand
+          building practical applications and digital tools for everyday
+          users.
+        </p>
+
+      </div>
+    </section>
+
+
+    <section id="work">
+      <div class="container">
+
+        <div class="section-label">
+          What We Build
+        </div>
+
+        <h2>
+          Focused on real-world digital experiences.
+        </h2>
+
+
+        <div class="cards">
+
+          <div class="card">
+
+            <div class="card-number">
+              01 · MOBILE
+            </div>
+
+            <h3>
+              Android Applications
+            </h3>
+
+            <p>
+              Modern Android applications focused on utility,
+              performance and a clean user experience.
+            </p>
+
+          </div>
+
+
+          <div class="card">
+
+            <div class="card-number">
+              02 · TOOLS
+            </div>
+
+            <h3>
+              Digital Utilities
+            </h3>
+
+            <p>
+              Practical software tools designed to make everyday
+              tasks simpler and more efficient.
+            </p>
+
+          </div>
+
+
+          <div class="card">
+
+            <div class="card-number">
+              03 · INNOVATION
+            </div>
+
+            <h3>
+              Better Experiences
+            </h3>
+
+            <p>
+              Continuous improvement through testing, feedback
+              and thoughtful product design.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section id="contact">
+      <div class="container">
+
+        <div class="contact">
+
+          <div class="section-label">
+            Get In Touch
+          </div>
+
+          <h2>
+            Need help with a ZeltaBits Labs product?
+          </h2>
+
+          <p>
+            For support, feedback or general enquiries, contact
+            the ZeltaBits Labs support team.
+          </p>
+
+          <a
+            href="mailto:zeltabitslabs.help@gmail.com"
+            class="button primary"
+          >
+            zeltabitslabs.help@gmail.com
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <div class="container footer-content">
+
+      <span>
+        © 2026 ZeltaBits Labs. All rights reserved.
+      </span>
+
+      <span>
+        Build. Innovate. Deliver.
+      </span>
+
+    </div>
+
+  </footer>
+
+</body>
+          </html>
